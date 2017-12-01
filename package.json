@@ -1,0 +1,18 @@
+{
+  "name": "pow-hash",
+  "version": "0.0.1",
+  "description": "Game-a-Thon, Hashcash Proof of Work Algorithm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "pow-hash": "./index.js"
+  },
+  "author": "Marcos Navarro",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.12.2",
+    "sha256": "^0.2.0"
+  }
+}
