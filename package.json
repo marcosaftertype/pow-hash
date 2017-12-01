@@ -1,6 +1,6 @@
 {
   "name": "pow-hash",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Game-a-Thon, Hashcash Proof of Work Algorithm",
   "main": "index.js",
   "scripts": {
