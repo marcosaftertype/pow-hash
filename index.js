@@ -21,17 +21,18 @@ let nonce = 1
 let difficultyString = ''.padStart(difficulty, '0')
 
 const algorithm = () => {
-  const hash = sha256.x2(`${message}${nonce}`)
-  if (hash.indexOf(difficultyString) === 0) {
-    console.timeEnd('Time')
-    console.log('Message:', message)
-    console.log('Difficulty:', difficulty)
-    console.log('PoW Hash:', hash)
-    console.log('Nonce:', nonce)
-    return
+  let hash = sha256.x2(`${message}${nonce}`)
+
+  while (hash.indexOf(difficultyString) != 0) {
+    nonce++
+    hash = sha256.x2(`${message}${nonce}`)
   }
-  nonce++
-  algorithm()
+
+  console.timeEnd('Time')
+  console.log('Message:', message)
+  console.log('Difficulty:', difficulty)
+  console.log('PoW Hash:', hash)
+  console.log('Nonce:', nonce)
 }
 
 algorithm()
